@@ -281,9 +281,8 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  - screenshot.png
   - docs/
-  - [vendor]
+  - vendor
 
 plugins:
   - jekyll-paginate
