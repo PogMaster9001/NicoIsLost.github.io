@@ -1,0 +1,97 @@
+---
+common-css:
+  - "/assets/css/bootstrap-social.css"
+  - "/assets/css/beautifuljekyll.css"
+common-ext-css:
+  - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    sri: "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  - "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+  - "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+  - "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+common-ext-js:
+  - href: "https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    sri: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  - href: "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    sri: "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+common-js:
+  - "/assets/js/beautifuljekyll.js"
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en' }}">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<!-- Custom modifications by Nico is Lost -->
+{% include head.html %}
+
+<body>
+
+  {% include gtm_body.html %}
+  <div class="top-label">Nico is Lost...</div>
+  <div class="splash-image"> 
+    <picture class="logo">
+      <source srcset="assets\img\576-wide-logo.png" media="(max-width: 576px)">
+      <source srcset="assets\img\768-wide-logo.png" media="(max-width: 768px)">
+      <source srcset="assets\img\1546-wide-logo.png" media="(max-width: 1546px)">
+      <source srcset="assets\img\1855-wide-logo.png" media="(max-width: 1855px)">
+      <img src="assets\img\2560-wide-logo.png" alt="">
+  </picture> 
+</div>
+<div class="home-links">
+  <li class="list-inline-item">
+    <a href="https://www.youtube.com/{{ site.social-network-links.youtube }}" title="YouTube">
+      <span" aria-hidden="true">
+        <i class="fab fa-youtube"></i>
+      </span>
+      <span class="sr-only">YouTube</span>
+   </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="https://discord.com/{{discord_url_prefix}}{{site.social-network-links.discord}}" title="Discord">
+      <span aria-hidden="true">
+        <i class="fab fa-discord"></i>
+      </span>
+      <span class="sr-only">Discord</span>
+   </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="https://github.com/{{ site.social-network-links.github }}" title="GitHub">
+      <span aria-hidden="true">
+        <i class="fab fa-github"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="https://twitter.com/{{ site.social-network-links.twitter }}" title="Twitter">
+      <span aria-hidden="true">
+        <i class="fab fa-twitter"></i>
+      </span>
+      <span class="sr-only">Twitter</span>
+   </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="https://patreon.com/{{ site.social-network-links.patreon }}" title="Patreon">
+      <span aria-hidden="true">
+        <i class="fab fa-patreon"></i>
+      </span>
+      <span class="sr-only">Patreon</span>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="mailto:{{ site.social-network-links.email }}" title="Email me">
+      <span aria-hidden="true">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li>
+</div>
+
+  {{ content }}
+
+  {% include footer-scripts.html %}
+
+</body>
+</html>

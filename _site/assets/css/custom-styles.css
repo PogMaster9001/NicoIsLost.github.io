@@ -1,0 +1,81 @@
+.fa-inverse {
+    color: #202020;
+}
+
+#nav-search-input:focus {
+    box-shadow: none;
+}
+
+code {
+    color: #fff;
+}
+
+pre {
+    border-radius: 0;
+}
+
+.box-note,
+.box-warning,
+.box-error
+ {
+    color: #161616;
+}
+
+.pagination .page-item .page-link {
+    background-color: #202020;
+}
+
+.pagination .page-item .page-link:hover {
+    color: #202020;
+}
+
+table {
+    color: #161616;
+}
+
+.post-preview .post-meta,
+.post-heading .post-meta {
+    color: gainsboro;
+}
+
+.splash-image {
+    width: 100%;
+    text-align: center;
+    padding-top: 0vh;
+    background: linear-gradient(#161616 56%, #282828 4%);
+}
+
+.top-label {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #DFBF0E;
+    font-weight: 100;
+    font-size: 18pt;
+    padding: 0.8%;
+    background-color: #161616
+}
+
+.home-links {
+    margin-top: 3vh;
+    font-size: 125px;
+    filter: drop-shadow(5px 5px 0px #171717);
+    width: 100%;
+    text-align: center;
+}
+
+.home-links .fab,
+.home-links .fas {
+    color: whitesmoke;
+    transition: transform .2s;
+}
+
+.home-links .fab:hover,
+.home-links .fas:hover
+ {
+    color: #f2e6b5;
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1200px) {
+    .home-links {
+        font-size: 12vw;
+    }
