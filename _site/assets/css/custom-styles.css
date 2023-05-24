@@ -65,7 +65,7 @@ table {
 .home-links .fas {
     color: whitesmoke;
     transition: transform .2s;
-    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    transition-timing-function: cubic-bezier(0.39, 0.9, 0.97, 2);
 }
 
 .home-links .fab:hover,
