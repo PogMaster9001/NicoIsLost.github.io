@@ -42,16 +42,18 @@ table {
     width: 100%;
     text-align: center;
     padding-top: 0vh;
-    background: linear-gradient(#161616 56%, #282828 4%);
+    background: linear-gradient(#161616 58%, #282828 42%);
 }
 
 .top-label {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #DFBF0E;
-    font-weight: 100;
-    font-size: 18pt;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 32pt;
     padding: 0.8%;
-    background-color: #161616
+    background-color: #161616;
+    text-align: center;
+    text-shadow: #080808 2px 2px;
 }
 
 .home-links {
@@ -71,8 +73,31 @@ table {
 .home-links .fab:hover,
 .home-links .fas:hover
  {
-    color: #e4e4e4;
     transform: scale(1.1);
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+}
+
+.fa-discord:hover {
+    color: #7289da;
+}
+
+.fa-github:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2;
+}
+
+.fa-patreon:hover {
+    color: #FF424D;
+}
+
+.fa-envelope:hover {
+    opacity: 0.5;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -80,3 +105,4 @@ table {
         font-size: 12vw;
     }
 }
+
