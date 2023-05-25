@@ -97,7 +97,7 @@ table {
 }
 
 .fa-envelope:hover {
-    opacity: 0.5;
+    color: #d2b646;
 }
 
 @media only screen and (max-width: 1200px) {
