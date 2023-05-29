@@ -40,7 +40,7 @@
         text-shadow: 0 0 0.25em var(--glow-color);
     }
     50% {
-        text-shadow: 0 0 0.05em var(--glow-color);
+        text-shadow: 0 0 0.10em var(--glow-color);
     }
     to {
         text-shadow: 0 0 0.25em var(--glow-color);
@@ -117,7 +117,7 @@ table {
     text-align: center;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 600;
-    animation: glow-size infinite 4s linear;
+    animation: glow-size infinite 6s linear;
     --glow-color: white;
 }
 
