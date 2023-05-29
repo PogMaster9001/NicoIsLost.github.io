@@ -1,9 +1,23 @@
+body {
+    background: #282828;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
 .fa-inverse {
     color: #202020;
 }
 
 #nav-search-input:focus {
     box-shadow: none;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto 1fr;
+    height: 100vh;
 }
 
 code {
@@ -46,21 +60,36 @@ table {
 }
 
 .top-label {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #161616;
+    margin: 0;
+    padding: 1rem;
+    font-size: var(--size);
     color: whitesmoke;
-    font-weight: 600;
-    font-size: 32pt;
-    padding: 0.8%;
-    background-color: #161616;
     text-align: center;
-    text-shadow: #080808 2px 2px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    animation: glow-size infinite 4s linear;
+    --glow-color: white;
 }
+
+@keyframes glow-size {
+    from {
+        text-shadow: 0 0 0.65em var(--glow-color);
+    }
+    50% {
+        text-shadow: 0 0 0.45em var(--glow-color);
+    }
+    to {
+        text-shadow: 0 0 0.65em var(--glow-color);
+    }
 
 .home-links {
     font-size: 125px;
     filter: drop-shadow(5px 5px 0px #171717);
     width: 100%;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .home-links .fab,
@@ -106,3 +135,39 @@ table {
     }
 }
 
+/** "Regular" screens **/
+@media (min-aspect-ratio: 1.3) and (max-aspect-ratio: 2.2) {
+    .logo {
+        --size: 150%;
+    }
+    #top-label {
+        --size: 4vw;
+    }
+}
+/** Vertical screens **/
+@media (min-aspect-ratio: 0) and (max-aspect-ratio: 1) {
+    .logo {
+        --size: 320%;
+    }
+    #top-label {
+        --size: 12.8vw;
+    }
+}
+/** Square and 4:3 screens **/
+@media (min-aspect-ratio: 1) and (max-aspect-ratio: 1.3) {
+    .logo {
+        --size: 200%;
+    }
+    #top-label {
+        --size: 8vw;
+    }
+}
+/** Wide screens **/
+@media (min-aspect-ratio: 2.2) {
+    .logo {
+        --size: 100%;
+    }
+    #top-label {
+        --size: 2.5vw;
+    }
+}
