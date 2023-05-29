@@ -54,6 +54,13 @@ body {
     padding: 0px;
 }
 
+.logo {
+    position: relative;
+    top: 0px;
+    width: var(--size);
+    left: calc(50% - (var(--size)/2));
+}
+
 .fa-inverse {
     color: #202020;
 }
