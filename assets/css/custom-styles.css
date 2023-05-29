@@ -108,13 +108,6 @@ table {
     color: gainsboro;
 }
 
-.splash-image {
-    width: 100%;
-    text-align: center;
-    padding-top: 0vh;
-    background: linear-gradient(#161616 58%, #282828 42%);
-}
-
 .top-label {
     background: #161616;
     margin: 0;
