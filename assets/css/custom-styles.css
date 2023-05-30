@@ -6,23 +6,41 @@
     .top-label {
         --size: 4vw;
     }
+    .home-links {
+        --pad: 10%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        font-size: 15vh;
+    }
 }
 /** Vertical screens **/
-@media (min-aspect-ratio: 0) and (max-aspect-ratio: 1) {
+@media (min-aspect-ratio: 0) and (max-aspect-ratio: 0.8) {
     .logo {
         --size: 320%;
     }
     .top-label {
-        --size: 12.8vw;
+        --size: 10vw;
+    }
+    .home-links {
+        --pad: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        font-size: 12vh;
     }
 }
 /** Square and 4:3 screens **/
-@media (min-aspect-ratio: 1) and (max-aspect-ratio: 1.3) {
+@media (min-aspect-ratio: 0.8) and (max-aspect-ratio: 1.3) {
     .logo {
         --size: 200%;
     }
     .top-label {
         --size: 8vw;
+    }
+    .home-links {
+        --pad: 10%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        font-size: max(10vw, 11vh);
     }
 }
 /** Wide screens **/
@@ -32,6 +50,12 @@
     }
     .top-label {
         --size: 2.5vw;
+    }
+    .home-links {
+        --pad: 20%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        font-size: 15vh;
     }
 }
 
@@ -50,6 +74,7 @@
 body {
     background: #282828;
     overflow-x: hidden;
+    overflow-y: hidden;
     margin: 0px;
     padding: 0px;
 }
@@ -122,12 +147,28 @@ table {
 }
 
 .home-links {
-    font-size: 125px;
     filter: drop-shadow(5px 5px 0px #171717);
     width: 100%;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    padding: 0 var(--pad);
+    position: relative;
+    top: -3vh;
+}
+
+.home-links li {
+    display: flex;
+    align-items: center;
+}
+
+.home-links li a {
+    width: 100%;
+    text-align: center;
+}
+
+.home-links-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .home-links .fab,
@@ -139,7 +180,7 @@ table {
 
 .home-links .fab:hover,
 .home-links .fas:hover
- {
+{
     transform: scale(1.1);
 }
 
@@ -148,11 +189,11 @@ table {
 }
 
 .fa-discord:hover {
-    color: #7289da;
+    color: #5865F2;
 }
 
 .fa-github:hover {
-    opacity: 0.7;
+    color: #6E5494;
 }
 
 .fa-twitter:hover {
@@ -166,10 +207,3 @@ table {
 .fa-envelope:hover {
     color: #d2b646;
 }
-
-@media only screen and (max-width: 1200px) {
-    .home-links {
-        font-size: 12vw;
-    }
-}
-
