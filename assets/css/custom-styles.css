@@ -26,6 +26,8 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         font-size: 12vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
 }
 /** Square and 4:3 screens **/
@@ -151,7 +153,8 @@ table {
     width: 100%;
     text-align: center;
     display: grid;
-    padding: 0 var(--pad);
+    padding-left: var(--pad);
+    padding-right: var(--pad);
     position: relative;
     top: -3vh;
 }
