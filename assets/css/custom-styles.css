@@ -101,6 +101,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: max-content auto 1fr;
     height: 100vh;
+    overflow: hidden;
 }
 
 code {
