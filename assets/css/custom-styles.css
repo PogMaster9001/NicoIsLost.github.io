@@ -112,6 +112,10 @@ code {
     color: #fff;
 }
 
+.highlighter-rouge {
+    background-color: #5b5b5b;
+}
+
 pre {
     border-radius: 0;
 }
