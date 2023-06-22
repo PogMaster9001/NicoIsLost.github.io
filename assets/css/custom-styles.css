@@ -32,6 +32,7 @@
 
     .navbar-brand {
         visibility: hidden;
+        height: 0px;
     }
 }
 /** Square and 4:3 screens **/
