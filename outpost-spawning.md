@@ -82,7 +82,7 @@ The heightmap is the highest block elevation minus the lowest possible elevation
 
 So in the overworld, like for the pillager farm, the equation is:
 
-\$$p(y_top)=\frac{1}{y + 64 + 2} \longrightarrow \frac{1}{y + 66}\label{eq:1}\$$
+\$$\int_{\partial \Omega} \omega = \int_{\Omega} d\omega\$$
 
 
 ## Size of Platforms
