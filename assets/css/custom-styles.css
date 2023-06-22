@@ -29,6 +29,10 @@
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
+
+    .navbar-brand {
+        visibility: hidden;
+    }
 }
 /** Square and 4:3 screens **/
 @media (min-aspect-ratio: 0.8) and (max-aspect-ratio: 1.3) {
