@@ -82,8 +82,7 @@ The heightmap is the highest block elevation minus the lowest possible elevation
 
 So in the overworld, like for the pillager farm, the equation is:
 
-This is an example of inline \\(\LaTeX\\). The following is Stokes' theorem in a
-`displaymath` environment: \$$\int_{\partial \Omega} \omega = \int_{\Omega} d\omega\$$
+ \$$\int_{\partial \Omega} \omega = \int_{\Omega} d\omega\$$
 
 
 ## Size of Platforms
