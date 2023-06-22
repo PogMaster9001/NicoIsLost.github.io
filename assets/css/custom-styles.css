@@ -31,10 +31,7 @@
     }
 
     .navbar-brand {
-        visibility: hidden;
-        height: 0px;
-        padding: 0px;
-        margin: 0px;
+        display: none;
     }
 }
 /** Square and 4:3 screens **/
