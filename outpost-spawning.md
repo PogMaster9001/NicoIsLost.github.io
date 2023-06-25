@@ -2,7 +2,7 @@
 layout: page
 title: Pillager Outpost XP Farm Design
 subtitle: Concepts and Equations
-katex: true
+katex: false
 ---
 
 #Pillager XP Farm
