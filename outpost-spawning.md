@@ -4,8 +4,6 @@ title: Pillager Outpost XP Farm Design
 subtitle: Concepts and Equations
 latex: true
 ---
-
-#Pillager XP Farm
 The whole basis of the pillager farm is rooted in two concepts:
 
 1. Only pillagers spawn within the bounding box around a pillager outpost, and
@@ -81,14 +79,57 @@ As is fairly commonly known, elevation plays a huge part in the mob spawning alg
 The heightmap is the highest block elevation minus the lowest possible elevation, then plus 2. The plus 2 is a part of the heightmap and basically represents spawning from the void to the surface of the block.
 
 So in the overworld, like for the pillager farm, the equation is:
+\\[P(y) = \frac{1}{y-(-64)+2)}\label{eq:1}\\] 
 
-This is an example of inline 
-\\[E=mc^2$$\\]
+Which simplifies to
 
+P(y) = 1 / (y + 66)
+
+This of course results in a very small chance of spawning, but we can improve it by making multiple platforms. 
+
+P(y,n) = n / (y+66)
+
+Typically the minimum platform height is going to be the determining limit that restricts where a series of platforms is built, then you would build up from that minimum height. So we can find the top platform elevation by:
+
+Y(y_min,n) = y_min+3*n
+
+Plugging this into equation 1:
+
+P(ymin,n) = n / (y_min +3*n+66)
+
+Using this we can find probability of a valid elevation being selected for different y_min elevations and platform numbers.
+
+From testing in game I found that a P() = 3.8% with about 1800 blocks results in max absorption.
+
+Lower elevations won't give you more XP in vanilla minecraftz but it may allow for less and/or smaller platforms.
 
 ## Size of Platforms
 
-# Other Design Considerations
+The size of the platforms is also very important for the spawning rates. A larger platform will of course spawn more. This is not as straightforward a calculation as elevation and is much easier to simulate than calculate in practice. 
 
-## Alive Time
+That said here we have not decided to dig that deep so the conclusion is that we used 1800 blocks, higher elevations or less platforms will result in more blocks required. Lower elevations or more platforms will require less blocks.
+
+# Other Design Considerations
+The other two major design considerations are:
+
+- Ease of building
+- Lag
+
+# Ease of Building 
+This is pretty straightforward, the easiest to build the better. For instance is it eaisesr to have less villagers and bigger platforms? Or more more villagers and less total blocks?
+
+Lavacasting is very helpful in this build, there is even an effort to design lavacasting the platforms, which will make Building very much easier.
+
+## Lag
+These farms are high entity farms. Entities are one of the biggest sources of lag, so handling them well is important.
+
+### Reducing entity lifetime
+The faster we can kill the pillagers the less will be alive on average, which will reduce the overall lag.
+
+Factors such as platform size and transportation method will help reduce lifetime. We found that using pillager pathfinding instead of water was an effective way to reduce lifetime. Other considerations such as platform size and shape will impact lifetime. 
+
+You can also put the kill chamber below the farm and drop pillagers to greatly reduce the lifetime, but this is less viable in survival.
+
+### Collisions
+Collisions are a demanding calculation in minecraft and often a source of lag. In a farm like this it is difficult to reduce collisions, but we should strive to reduce collisions as much as possible.
 
