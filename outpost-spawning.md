@@ -81,7 +81,7 @@ The heightmap is the highest block elevation minus the lowest possible elevation
 So in the overworld, like for the pillager farm, the equation is:
 \\[P(y) = \frac{1}{y-(-64)+2)}\label{eq:1}\\] 
 
-Which simplifies to
+Which simplifies to:
 
 P(y) = 1 / (y + 66)
 
