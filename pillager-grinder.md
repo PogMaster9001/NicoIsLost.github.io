@@ -97,11 +97,11 @@ Typically the minimum platform height is going to be the determining limit that 
 
 \\[
     \begin{equation}\label{eq:3}
-    y_{top}(y_{min}) =  y_min+3*n
+    y_{top}(y_{min}) =  y_{min}+3*n
     \end{equation}
 \\] 
 
-Plugging this into Equation\\(\ref{eq:2}\\):
+Plugging this into Equation \\(\ref{eq:2}\\):
 
 \\[
     \begin{equation}\label{eq:4}
@@ -109,7 +109,7 @@ Plugging this into Equation\\(\ref{eq:2}\\):
     \end{equation}
 \\] 
 
-Using this we can find probability of a valid elevation being selected for different y_min elevations and platform numbers.
+Using this we can find probability of a valid elevation being selected for different \\(y_{min}\\) elevations and platform numbers.
 
 From testing in game we found that a \\(p() = 3.8%\\) with about 1800 blocks results in max absorption.
 
@@ -128,9 +128,9 @@ The other two major design considerations are:
 - Lag
 
 # Ease of Building 
-This is pretty straightforward, the easiest to build the better. For instance is it eaisesr to have less villagers and bigger platforms? Or more more villagers and less total blocks?
+This is pretty straightforward, the easier to build the better. For instance is it easier to have less villagers and bigger platforms? Or more more villagers and less total blocks?
 
-Lavacasting is very helpful in this build, there is even an effort to design lavacasting the platforms, which will make Building very much easier.
+Lavacasting is very helpful in this build, there is even an effort to design lavacasting the platforms, which will make building much easier.
 
 ## Lag
 These farms are high entity farms. Entities are one of the biggest sources of lag, so handling them well is important.
