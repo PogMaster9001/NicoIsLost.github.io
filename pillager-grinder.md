@@ -80,9 +80,10 @@ The heightmap is the highest block elevation minus the lowest possible elevation
 
 So in the overworld, like for the pillager farm, with \\(y = elevation\\), the equation for selecting any single elevation is:
 \\[
-    \begin{equation}\label{eq:1}
-    p(y) = \frac{1}{y-(-64)+2}\\]
-    \end{equation} 
+\begin{equation}\label{eq:1}
+p(y) = \frac{1}{y-(-64)+2}
+\end{equation} 
+\\]
 
 Which simplifies to:
 
