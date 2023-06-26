@@ -79,11 +79,7 @@ As is fairly commonly known, elevation plays a huge part in the mob spawning alg
 The heightmap is the highest block elevation minus the lowest possible elevation, then plus 2. The plus 2 is a part of the heightmap and basically represents spawning from the void to the surface of the block.
 
 So in the overworld, like for the pillager farm, the equation is:
-\\[
-    \begin{1}
-        P(y) = \frac{1}{y-(-64)+2)}\label{eq:1}
-    \end
-\\] 
+\\[P(y) = \frac{1}{y-(-64)+2)}\tag{eq:1}\\] 
 
 Which simplifies to:
 
