@@ -96,7 +96,7 @@ Which simplifies to:
 This of course results in a very small chance of spawning, but we can improve it by making multiple platforms, with \\(n = \text{number of platforms}\\), \\(y_{top}=\text{top platform elevation}\\). 
 
 \\[
-    \begin{equation}\label{eq:3}
+    \begin{equation}\label{eq:}
         p(y_{top},n) = \frac{n}{y+66}
     \end{equation} 
 \\] 
@@ -109,7 +109,7 @@ Typically the minimum platform height is going to be the determining limit that 
     \end{equation}
 \\] 
 
-Plugging this into \\(\ref{eq:3}\\):
+Plugging this into Equation\\(\ref{eq:3}\\):
 
 \\[
     \begin{equation}\label{eq:5}
