@@ -86,9 +86,9 @@ Which simplifies to:
 \\[P(y) = \frac{1}{y+66)}\tag{2}\label{eq2}\\] 
 
 
-This of course results in a very small chance of spawning, but we can improve it by making multiple platforms, with \\(n = number of platforms\\), \\(y_{top}=Top Platform Elevation\\). 
+This of course results in a very small chance of spawning, but we can improve it by making multiple platforms, with \\(n = \text{number of platforms}\\), \\(y_{top}=\text{top platform elevation}\\). 
 
-\\[P(y) = \frac{n}{y+66)}\tag{3}\label{eq3}\\] 
+\\[P(y) = \frac{n}{y+66}\tag{3}\label{eq3}\\] 
 
 Typically the minimum platform height is going to be the determining limit that restricts where a series of platforms is built, then you would build up from that minimum height. So we can find the top platform elevation by:
 
