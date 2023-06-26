@@ -65,7 +65,7 @@ The mob cap is a non-issue because any pillager that joins a raid will not be co
 ## XP Absorption Rate
 Before we get into the spawning we need to consider how much spawning we actually should be achieving. The maim factor is the XP absorption rate. In vanilla minecraft there is an upper limit to how many XP orbs can be absorbed by a player. The limit is 36,000 orbs an hour. The actual absorption limit will be determined by the average orb size. The bigger the orb the higher the limit. 
 
-Pillagers drop up to 8 XP per villager. My limited in-game testing shows about 133k XP an hour resulting in an orb size of a little more than 3.7 xp per orb.
+Pillagers drop up to 8 XP per villager. The average XP orb size is 4.2 XP / orb, which results in a maximum XP absorption from pillagers of 151,000 XP/hr
 
 The summary is, any more than this rate in vanilla minecraft is pointless and will just cause lag. It would be awesome if someone wants to test a little bit more the max spawning rate and play with it to dial it in even more, and if you do, please share it and I will update this document! 
 
@@ -84,6 +84,8 @@ So in the overworld, like for the pillager farm, with \\(y = elevation\\), the e
         p(y) = \frac{1}{y-(-64)+2}\longrightarrow\frac{1}{y+66}
     \end{equation} 
 \\]
+
+![Elevation probability graph](\assets\img\pillager-grinder\Pillager-EL-Graph.png)
 
 This of course results in a very small chance of spawning, but we can improve it by making multiple platforms, with \\(n = \text{number of platforms}\\), \\(y_{top}=\text{top platform elevation}\\). 
 
@@ -108,6 +110,8 @@ Plugging this into Equation \\(\ref{eq:2}\\):
     p(y_{min},n) = \frac{n}{y_{min}+3*n+66}
     \end{equation}
 \\] 
+
+![Platform Number Graph](\assets\img\pillager-grinder\Pillager Platform Graph.png)
 
 Using this we can find probability of a valid elevation being selected for different \\(y_{min}\\) elevations and platform numbers.
 
