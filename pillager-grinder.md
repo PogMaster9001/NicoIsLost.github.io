@@ -16,7 +16,7 @@ The bounding box is a kind of a pain in the butt. It is a 72x54x72 box area. It�
 
 In some instances it was centered on the +X, +Z corner, and in some instances it was centered on the -X, -Z, but it seems like it could be any corner, which is really annoying. 
 
-It does appear to consistently spawn at an elevation from +/27 block from both the top and bottom surfaces of the block, at least that is consistent even if it doesn’t make a lot of sense. 
+It does appear to consistently spawn at an elevation from +/- 27 block from both the top and bottom surfaces of the block, at least that is consistent even if it doesn’t make a lot of sense. 
 
 With carpet mod you can easily find out by placing carpets to check the spawns and just find the dimensions. In vanilla without mods it’s harder, you can of course build a platform and check, but that’s a lot of work, so either build one more block out to be safe, or live with one less block out. 
 
@@ -69,7 +69,7 @@ Pillagers drop up to 8 XP per villager. My limited in-game testing shows about 1
 
 The summary is, any more than this rate in vanilla minecraft is pointless and will just cause lag. It would be awesome if someone wants to test a little bit more the max spawning rate and play with it to dial it in even more, and if you do, please share it and I will update this document! 
 
-(Best way to share is via discord, or you can do a direct pull request on the github repo, https://github.com/NicoIsLost/NicoIsLost.github.io)
+(Best way to share is via [discord](), or you can do a direct pull request on [the github repo](https://github.com/NicoIsLost/NicoIsLost.github.io))
 
 Of course, there are plenty of mods that allow you to absorb more XP orbs, in that case the more the better, but that will be on an individual basis. 
 
@@ -81,7 +81,7 @@ The heightmap is the highest block elevation minus the lowest possible elevation
 So in the overworld, like for the pillager farm, with \\(y = elevation\\), the equation for selecting any single elevation is:
 \\[
     \begin{equation}\label{eq:1}
-        p(y) = \frac{1}{y-(-64)+2}
+        p(y) = \frac{1}{y-(-64)+2}\longrightarrow p(y) = \frac{1}{y+66}
     \end{equation} 
 \\]
 
@@ -96,7 +96,7 @@ Which simplifies to:
 This of course results in a very small chance of spawning, but we can improve it by making multiple platforms, with \\(n = \text{number of platforms}\\), \\(y_{top}=\text{top platform elevation}\\). 
 
 \\[
-    \begin{equation}\label{eq:}
+    \begin{equation}\label{eq:3}
         p(y_{top},n) = \frac{n}{y+66}
     \end{equation} 
 \\] 
@@ -119,7 +119,7 @@ Plugging this into Equation\\(\ref{eq:3}\\):
 
 Using this we can find probability of a valid elevation being selected for different y_min elevations and platform numbers.
 
-From testing in game I found that a \\(p() = 3.8%\\) with about 1800 blocks results in max absorption.
+From testing in game we found that a \\(p() = 3.8%\\) with about 1800 blocks results in max absorption.
 
 Lower elevations won't give you more XP in vanilla minecraft but it may allow for less and/or smaller platforms.
 
