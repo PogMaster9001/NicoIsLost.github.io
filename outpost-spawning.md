@@ -2,7 +2,7 @@
 layout: page
 title: Pillager Outpost XP Farm Design
 subtitle: Concepts and Equations
-katex: false
+latex: true
 ---
 
 #Pillager XP Farm
@@ -83,9 +83,7 @@ The heightmap is the highest block elevation minus the lowest possible elevation
 So in the overworld, like for the pillager farm, the equation is:
 
 This is an example of inline 
- $$
- p(y_{top})=\frac{1}{y + 64 + 2}\longrightarrow p(y_top)=\frac{1}{y + 64 + 2} \label {eq:1}
- $$
+ $$p(y_{top})=\frac{1}{y + 64 + 2}\longrightarrow p(y_top)=\frac{1}{y + 64 + 2} \label {eq:1}$$
 
 
 ## Size of Platforms
