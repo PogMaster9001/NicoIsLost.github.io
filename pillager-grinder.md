@@ -81,22 +81,14 @@ The heightmap is the highest block elevation minus the lowest possible elevation
 So in the overworld, like for the pillager farm, with \\(y = elevation\\), the equation for selecting any single elevation is:
 \\[
     \begin{equation}\label{eq:1}
-        p(y) = \frac{1}{y-(-64)+2}\longrightarrow p(y) = \frac{1}{y+66}
+        p(y) = \frac{1}{y-(-64)+2}\longrightarrow\frac{1}{y+66}
     \end{equation} 
 \\]
-
-Which simplifies to:
-
-\\[
-    \begin{equation}\label{eq:2}
-        p(y) = \frac{1}{y+66}
-    \end{equation} 
-\\] 
 
 This of course results in a very small chance of spawning, but we can improve it by making multiple platforms, with \\(n = \text{number of platforms}\\), \\(y_{top}=\text{top platform elevation}\\). 
 
 \\[
-    \begin{equation}\label{eq:3}
+    \begin{equation}\label{eq:2}
         p(y_{top},n) = \frac{n}{y+66}
     \end{equation} 
 \\] 
@@ -104,15 +96,15 @@ This of course results in a very small chance of spawning, but we can improve it
 Typically the minimum platform height is going to be the determining limit that restricts where a series of platforms is built, then you would build up from that minimum height. So we can find the top platform elevation by:
 
 \\[
-    \begin{equation}\label{eq:4}
+    \begin{equation}\label{eq:3}
     y_{top}(y_{min}) =  y_min+3*n
     \end{equation}
 \\] 
 
-Plugging this into Equation\\(\ref{eq:3}\\):
+Plugging this into Equation\\(\ref{eq:2}\\):
 
 \\[
-    \begin{equation}\label{eq:5}
+    \begin{equation}\label{eq:4}
     p(y_{min},n) = \frac{n}{y_{min}+3*n+66}
     \end{equation}
 \\] 
