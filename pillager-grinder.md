@@ -78,21 +78,23 @@ As is fairly commonly known, elevation plays a huge part in the mob spawning alg
 
 The heightmap is the highest block elevation minus the lowest possible elevation, then plus 2. The plus 2 is a part of the heightmap and basically represents spawning from the void to the surface of the block.
 
-So in the overworld, like for the pillager farm, with \\(y = elevation\\), the equation is:
-\\[P(y) = \frac{1}{y-(-64)+2}\tag{1}\label{eq1}\\] 
+So in the overworld, like for the pillager farm, with \\(y = elevation\\), the equation for selecting any single elevation is:
+\\[
+    \begin{equation}\label{eq:1}
+    p(y) = \frac{1}{y-(-64)+2}\\]
+    \end{equation} 
 
 Which simplifies to:
 
-\\[P(y) = \frac{1}{y+66}\tag{2}\label{eq2}\\] 
-
+\\[p(y) = \frac{1}{y+66}\tag{2}\label{Equation}\\] 
 
 This of course results in a very small chance of spawning, but we can improve it by making multiple platforms, with \\(n = \text{number of platforms}\\), \\(y_{top}=\text{top platform elevation}\\). 
 
-\\[P(y) = \frac{n}{y+66}\tag{3}\label{eq3}\\] 
+\\[p(y) = \frac{n}{y+66}\tag{3}\label{eq3}\\] 
 
 Typically the minimum platform height is going to be the determining limit that restricts where a series of platforms is built, then you would build up from that minimum height. So we can find the top platform elevation by:
 
-Y(y_min,n) = y_min+3*n
+\\[y(y_{top}) =  y_min+3*n\tag{4}\label{eq4}\\] 
 
 Plugging this into equation 1:
 
