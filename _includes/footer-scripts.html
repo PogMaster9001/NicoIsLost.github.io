@@ -36,3 +36,19 @@
     <script src="{{ js | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+{% if page.latex %}
+  <script type="text/javascript">
+    $("script[type='math/tex']").replaceWith(
+      function(){
+        var tex = $(this).text();
+        return katex.renderToString(tex, {displayMode: false});
+    });
+    
+    $("script[type='math/tex; mode=display']").replaceWith(
+      function(){
+        var tex = $(this).text();
+        return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+    });
+  </script>
+{% endif %}
