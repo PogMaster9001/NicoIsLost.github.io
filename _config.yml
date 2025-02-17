@@ -20,12 +20,12 @@ url: "https://www.nicoislost.com/"
 # --- List of links in the navigation bar --- #
 ###############################################
 
-#navbar-links:
-#  About Me: "aboutme"
-#  Resources:
-#    - Beautiful Jekyll: "https://beautifuljekyll.com"
-#    - Learn markdown: "https://www.markdowntutorial.com/"
-#  Author's home: "https://deanattali.com"
+navbar-links:
+ SMP: "SMP"
+ Resources:
+   - Beautiful Jekyll: "https://beautifuljekyll.com"
+   - Learn markdown: "https://www.markdowntutorial.com/"
+ Author's home: "https://deanattali.com"
 
 ################
 # --- Logo --- #
